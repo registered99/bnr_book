@@ -1,5 +1,5 @@
 //
-//  MasterViewController.h
+//  BNRItemsViewController.h
 //  Homepwner
 //
 //  Created by Justin Wong on 25/11/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
-
+@interface BNRItemsViewController : UITableViewController
 
 @end
-

@@ -1,23 +1,35 @@
 //
-//  AppDelegate.m
+//  BNRAppDelegate.m
 //  Homepwner
 //
 //  Created by Justin Wong on 25/11/14.
 //  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
-#import "AppDelegate.h"
-#import "DetailViewController.h"
+#import "BNRAppDelegate.h"
+#import "BNRItemsViewController.h"
 
-@interface AppDelegate ()
+@interface BNRAppDelegate ()
 
 @end
 
-@implementation AppDelegate
-
+@implementation BNRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Programatically create a window and screen versus using a storybord/xib
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // Create a BNRItemsViewController
+    BNRItemsViewController *itemsViewController = [[BNRItemsViewController alloc] init];
+    
+    // Place BNRItemsViewController's table view in the window hierarchy
+    self.window.rootViewController = itemsViewController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
