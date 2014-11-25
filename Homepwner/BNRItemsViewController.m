@@ -35,12 +35,22 @@
     return [[[BNRItemStore sharedStore] allItems] count];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+   
+    // Register the `UITableViewCell` class with the table view, so that
+    // it knows which class to create for this reuseIdentifier
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"UITableViewCell"];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView
 cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Create an instance of UITableViewCell, with default appearance
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                                   reuseIdentifier:@"UITableViewCell" ];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+                                                            forIndexPath:indexPath];
     
     // Set the text on the cell with the description of the `BNRItem`
     // that is at the nth index of items, where n = row this cell
@@ -52,5 +62,4 @@ cellForRowAtIndexPath:(NSIndexPath *)indexPath
     
     return cell;
 }
-
 @end
