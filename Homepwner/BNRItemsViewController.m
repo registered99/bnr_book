@@ -24,9 +24,6 @@
     // Make all instsances of `BNRItemsViewController` use the "plain" style
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        for (int i=0; i < 5; i++) {
-            [[BNRItemStore sharedStore] createItem];
-        }
     }
     return self;
 }
@@ -89,6 +86,16 @@ cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (IBAction)addNewItem:(id)sender
 {
+    // Create a new BNRItem and add it to the store
+    BNRItem *newItem = [[BNRItemStore sharedStore] createItem];
+    
+    // Figure out where that item is in the array
+    NSInteger lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:newItem];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    
+    // Insert this new row into the table
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
 }
 
 - (UIView *)headerView
