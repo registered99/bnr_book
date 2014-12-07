@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1059AECB1A34C97E006812C6 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1059AECA1A34C97E006812C6 /* HeaderView.xib */; };
 		10EBB4AC1A24E083003F9143 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EBB4AB1A24E083003F9143 /* main.m */; };
 		10EBB4AF1A24E083003F9143 /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EBB4AE1A24E083003F9143 /* BNRAppDelegate.m */; };
 		10EBB4BA1A24E083003F9143 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EBB4B91A24E083003F9143 /* Images.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1059AECA1A34C97E006812C6 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		10EBB4A61A24E083003F9143 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EBB4AA1A24E083003F9143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10EBB4AB1A24E083003F9143 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				10EBB4AE1A24E083003F9143 /* BNRAppDelegate.m */,
 				10EBB4D21A2517FA003F9143 /* BNRItemsViewController.h */,
 				10EBB4D31A2517FA003F9143 /* BNRItemsViewController.m */,
+				1059AECA1A34C97E006812C6 /* HeaderView.xib */,
 				10EBB4B91A24E083003F9143 /* Images.xcassets */,
 				10EBB4A91A24E083003F9143 /* Supporting Files */,
 			);
@@ -206,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1059AECB1A34C97E006812C6 /* HeaderView.xib in Resources */,
 				10EBB4BA1A24E083003F9143 /* Images.xcassets in Resources */,
 				10EBB4DC1A252AF6003F9143 /* Default-568h@2x.png in Resources */,
 			);
@@ -401,6 +405,7 @@
 				10EBB4CE1A24E084003F9143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10EBB4CF1A24E084003F9143 /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +414,7 @@
 				10EBB4D11A24E084003F9143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
