@@ -74,6 +74,17 @@ cellForRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (IBAction)toggleEditMode:(id)sender
 {
+    if (self.isEditing) {
+        // Change the text of the button to inform the user of state
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        // Turn off editing mode
+        [self setEditing:NO animated:YES];
+        
+    } else {
+        // Change the text of the button to inform the user of state
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        [self setEditing:YES animated:YES];
+    }
 }
 
 - (IBAction)addNewItem:(id)sender
