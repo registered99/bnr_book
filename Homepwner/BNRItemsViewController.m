@@ -143,4 +143,13 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     // Push it onto the top of the navigation controller's stack
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // Reload data in the tableView, since we probably just
+    // updated it in the detilviewcontroller
+    [self.tableView reloadData];
+}
 @end
